@@ -753,13 +753,13 @@ def expand_abc(abc):
                  :func:`strip_slurs`
 
     """
-    for f in [strip_octave, strip_accidentals, strip_triplets,
+    for f in [strip_triplets,
               strip_chords, strip_gracenotes, strip_decorations,
               strip_slurs, expand_notes, expand_parts,
               strip_whitespace, strip_bar_dividers, strip_extra_chars]:
         abc = f(abc)
 
-    return abc.lower()
+    return abc
 
 
 def wrap_line(string, id, max_length=78, prefix='+'):
